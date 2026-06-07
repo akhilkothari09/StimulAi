@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Colors */
+  --color-surface-base: #000000;
+  --color-surface-secondary: #111111;
+  --color-surface-elevated: #1a1a1a;
+  
+  --color-brand-primary: #b7182b;
+  --color-brand-hover: #d11f36;
+  --color-brand-active: #8f1021;
+  --color-tech-blue: #00B4D8;
+  
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #6b7280;
+  
+  --color-border-default: #2d2d2d;
+  
+  /* Spacing Scale */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem;  /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1.0rem;  /* 16px */
+  --space-5: 1.5rem;  /* 24px */
+  --space-6: 2.0rem;  /* 32px */
+  --space-7: 3.0rem;  /* 48px */
+  --space-8: 4.0rem;  /* 64px */
+  --space-9: 6.0rem;  /* 96px */
+
+  /* Typography Scale */
+  --font-family: 'Prompt', sans-serif;
+  
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-md: 1.0rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.5rem;    /* 24px */
+  --font-size-2xl: 2.25rem;  /* 36px */
+  --font-size-3xl: 3.0rem;   /* 48px */
+  --font-size-4xl: 4.0rem;   /* 64px */
+  --font-size-5xl: 5.0rem;   /* 80px */
+  
+  /* Borders */
+  --radius-xs: 4px;
+  --radius-sm: 12px;
+  
+  /* Animation Timings */
+  --motion-duration-fast: 150ms;
+  --motion-duration-normal: 300ms;
+  --motion-duration-slow: 500ms;
+  --motion-duration-cinematic: 800ms;
+  
+  --motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-in-out: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+/* Base Accessibility: Prefers Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration-fast: 0ms !important;
+    --motion-duration-normal: 0ms !important;
+    --motion-duration-slow: 0ms !important;
+    --motion-duration-cinematic: 0ms !important;
+  }
+}
