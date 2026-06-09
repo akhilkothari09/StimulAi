@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from '../components/Button';
 import SectionHeader from '../components/SectionHeader';
 import TechCard from '../components/TechCard';
@@ -6,6 +6,19 @@ import StatCard from '../components/StatCard';
 import SplitCard from '../components/SplitCard';
 
 export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const slides = [
+    { src: '/assets/hero_engineering.png', alt: 'Technical system schematic diagram overlaying an advanced structural frame with tech blue coordinate points.' },
+    { src: '/assets/rcx_bike.jpg', alt: 'STIMULAI Node 1 - Integrated red carbon performance engineering chassis.', isBike: true }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % slides.length);
+    }, 4500);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       {/* SECTION 1: HERO */}
@@ -22,7 +35,25 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-visual-container">
-            <img src="/assets/hero_engineering.png" alt="Technical system schematic diagram overlaying an advanced structural frame with tech blue coordinate points." className="hero-visual" />
+            <div className="hero-carousel">
+              {slides.map((slide, index) => {
+                let slideClass = 'hero-carousel-slide';
+                if (index === activeIndex) {
+                  slideClass += ' active';
+                } else if (index === (activeIndex - 1 + slides.length) % slides.length) {
+                  slideClass += ' prev';
+                }
+                return (
+                  <div key={index} className={slideClass}>
+                    <img 
+                      src={slide.src} 
+                      alt={slide.alt} 
+                      className={`hero-visual ${slide.isBike ? 'bike-crop' : ''}`} 
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +174,7 @@ export default function Home() {
           </SectionHeader>
 
           <div className="showcase-visual-wrapper">
-            <img src="/assets/product_bike.png" alt="STIMULAI Node 01 - Structural composite frame detailing load vectors and sensor integrations." className="showcase-image" />
+            <img src="/assets/rcx_bike.jpg" alt="STIMULAI Node 1 - Integrated red carbon performance engineering chassis." className="showcase-image bike-crop" />
 
             <div className="annotation annotation-frame">
               <div className="annotation-dot" aria-describedby="desc-frame"></div>
@@ -249,7 +280,7 @@ export default function Home() {
         <div className="container">
           <div className="split-grid">
             <div className="philosophy-intro">
-              <SectionHeader eyebrow="CAREERS" title="Calibrating talent. R&D vacancies open." />
+              <SectionHeader title="Calibrating talent. R&D vacancies open." />
               <p style={{ marginBottom: 'var(--space-5)' }}>
                 We are looking for mechanical engineers, materials scientists, and embedded software developers who refuse to accept incremental progress and default methods.
               </p>

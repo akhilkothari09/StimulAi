@@ -1540,3 +1540,53 @@ section {
     align-items: flex-start;
   }
 }
+
+/* Hero Carousel Styles */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--color-border-default);
+}
+
+.hero-carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translate3d(0, 0, 80px) scale(1.05); /* Comes forward first on transition-in */
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+
+.hero-carousel-slide.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  z-index: 2;
+}
+
+.hero-carousel-slide.prev {
+  opacity: 0;
+  transform: translate3d(0, 0, -80px) scale(0.92); /* Outgoing slide goes backward */
+  z-index: 1;
+}
+
+/* Specific class for cropping the red bike image to cut the bottom spec callouts */
+.bike-crop {
+  object-position: center top !important;
+}
+
+/* Showcase or standalone elements needing 16:10 cropping */
+.showcase-image.bike-crop,
+img.bike-crop:not(.hero-visual) {
+  aspect-ratio: 1.6;
+  object-fit: cover;
+  object-position: center top;
+}

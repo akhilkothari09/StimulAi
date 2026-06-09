@@ -20,7 +20,7 @@ export default function Products() {
         <div className="container">
           <div className="grid-2">
             <div className="crosshair-card" style={{ border: '1px solid var(--color-border-default)', padding: 'var(--space-2)' }}>
-              <img src="/assets/product_bike.png" alt="STIMULAI Node 1 - Structural wireframe composite chassis showing load vectors and sensor integration." style={{ width: '100%', borderRadius: 'var(--radius-sm)' }} />
+              <img src="/assets/rcx_bike.jpg" alt="STIMULAI Node 1 - Integrated red carbon performance engineering chassis." className="bike-crop" style={{ width: '100%', borderRadius: 'var(--radius-sm)' }} />
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 'var(--space-4)' }}>
               <h2 style={{ fontSize: 'var(--font-size-2xl)' }}>STIMULAI NODE_1</h2>
@@ -44,6 +44,42 @@ export default function Products() {
                 <li className="spec-item">
                   <span className="spec-label"> EFFICIENCY_INDEX </span>
                   <span className="spec-value">98.4% mechanical energy transmission</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHEEL SYSTEM DISPLAY */}
+      <section style={{ borderTop: '1px solid var(--color-border-default)' }}>
+        <div className="container">
+          <div className="grid-2" style={{ direction: 'rtl' }}>
+            <div className="crosshair-card" style={{ border: '1px solid var(--color-border-default)', padding: 'var(--space-2)', direction: 'ltr' }}>
+              <img src="/assets/rcx_wheel.jpg" alt="STIMULAI RCX One Wheel System - Aerodynamic 60mm depth 3K carbon composite structure." style={{ width: '100%', borderRadius: 'var(--radius-sm)' }} />
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 'var(--space-4)', direction: 'ltr' }}>
+              <h2 style={{ fontSize: 'var(--font-size-2xl)' }}>STIMULAI RCX ONE WHEEL SYSTEM</h2>
+              <p>
+                A high-profile aerodynamic wheel system designed to minimize drag and optimize lateral stiffness under extreme structural loads.
+              </p>
+
+              <ul className="spec-list">
+                <li className="spec-item">
+                  <span className="spec-label"> MATERIAL_PROFILE </span>
+                  <span className="spec-value">3K Carbon Fiber weave, customized resin matrix</span>
+                </li>
+                <li className="spec-item">
+                  <span className="spec-label"> AERO_DEPTH </span>
+                  <span className="spec-value">60mm optimized profile for wind-yaw transitions</span>
+                </li>
+                <li className="spec-item">
+                  <span className="spec-label"> TIRE_INTERFACE </span>
+                  <span className="spec-value">Tubeless ready, optimized bead bed geometry</span>
+                </li>
+                <li className="spec-item">
+                  <span className="spec-label"> SPOKE_TENSION </span>
+                  <span className="spec-value">High-tension aero bladed spokes with integrated nipples</span>
                 </li>
               </ul>
             </div>
