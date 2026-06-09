@@ -80,7 +80,7 @@ export default function Home() {
       {/* SECTION 4: TECHNOLOGY PILLARS */}
       <section className="technology-pillars-section reveal">
         <div className="container">
-          <SectionHeader eyebrow="[ ARCHITECTURE_PLATFORM ]" title="Four disciplines. One machine." centered>
+          <SectionHeader title="Four disciplines. One machine." centered>
             STIMULAI's engineering platform is a systematic approach to building machines that perform at the limit of physical possibility.
           </SectionHeader>
 
@@ -138,7 +138,7 @@ export default function Home() {
       {/* SECTION 5: PRODUCT SHOWCASE */}
       <section className="product-showcase-section reveal">
         <div className="container showcase-container">
-          <SectionHeader eyebrow="[ PLATFORM_NODE_01 ]" title="Where the platform meets the athlete." centered>
+          <SectionHeader title="Where the platform meets the athlete." centered>
             This is the first physical validation of the STIMULAI platform — a composite structural system integrating telemetry and logic controls.
           </SectionHeader>
 
@@ -224,20 +224,20 @@ export default function Home() {
       {/* SECTION 7: INNOVATION */}
       <section className="innovation-section reveal">
         <div className="container">
-          <SectionHeader eyebrow="[ R&D_PIPELINE ]" title="The bicycle is proof. The platform is the point.">
+          <SectionHeader title="The bicycle is proof. The platform is the point.">
             STIMULAI's engineering platform is product-agnostic and scales across every boundary where human capacity meets mechanical possibility.
           </SectionHeader>
           <div className="concept-grid">
             <div className="concept-card crosshair-card">
-              <span className="concept-label">PHASE_01: ROAD_COMPLETION</span>
+              <span className="concept-label">ROAD COMPLETION</span>
               <p className="concept-desc">Where the road ends, the materials engineering and adaptive stiffness integration continues.</p>
             </div>
             <div className="concept-card crosshair-card">
-              <span className="concept-label">PHASE_02: AEROSPACE_COOP</span>
+              <span className="concept-label">AEROSPACE COOP</span>
               <p className="concept-desc">Different sport. Same obsession. Re-engineering interfaces for aerospace tolerances.</p>
             </div>
             <div className="concept-card crosshair-card">
-              <span className="concept-label">PHASE_03: ML_CALIBRATION</span>
+              <span className="concept-label">ML CALIBRATION</span>
               <p className="concept-desc">Aggregated metrics are feeding adaptive machine intelligence that calibrates in motion.</p>
             </div>
           </div>
@@ -249,7 +249,7 @@ export default function Home() {
         <div className="container">
           <div className="split-grid">
             <div className="philosophy-intro">
-              <SectionHeader eyebrow="[ CAREERS_LOG ]" title="Calibrating talent. R&D vacancies open." />
+              <SectionHeader eyebrow="CAREERS" title="Calibrating talent. R&D vacancies open." />
               <p style={{ marginBottom: 'var(--space-5)' }}>
                 We are looking for mechanical engineers, materials scientists, and embedded software developers who refuse to accept incremental progress and default methods.
               </p>
@@ -267,7 +267,7 @@ export default function Home() {
       {/* SECTION 9: CONTACT CTA */}
       <section className="contact-cta-section reveal">
         <div className="container">
-          <SectionHeader title="The right conversation changes everything." eyebrow="[ CONNECT_PORTAL ]" centered />
+          <SectionHeader title="The right conversation changes everything." centered />
           <div className="split-grid">
             <SplitCard title="For Athletes" to="/contact?type=athlete" btnText="Enquire About Products">
               Looking for a custom machine calibrated to your exact biomechanics profile and load limits? Let's discuss performance goals.
