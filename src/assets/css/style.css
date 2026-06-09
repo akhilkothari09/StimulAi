@@ -459,7 +459,7 @@ section {
   width: fit-content;
   margin: 0 auto;
   margin-bottom: var(--space-8);
-  transform: translateY(-40px);
+
 }
 
 .mobile-nav-link {
@@ -508,7 +508,10 @@ section {
 }
 
 .mobile-nav-tagline {
-  margin-top: auto;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: var(--font-size-xs);
   font-weight: 600;
   letter-spacing: 0.3em;
