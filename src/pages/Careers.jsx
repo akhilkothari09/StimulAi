@@ -18,7 +18,7 @@ export default function Careers() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate API delay
     setTimeout(() => {
       setIsSubmitting(false);
@@ -31,7 +31,6 @@ export default function Careers() {
       {/* INNER PAGE HERO */}
       <section className="hero-section" style={{ minHeight: '60vh', paddingBottom: 'var(--space-6)' }}>
         <div className="container" style={{ zIndex: 2 }}>
-          <span className="hero-eyebrow">[ CAREERS_PORTAL: R&D_INTEGRATION ]</span>
           <h1 className="hero-headline" style={{ maxWidth: '25ch' }}>THE FUTURE OF HUMAN PERFORMANCE ENGINEERING.</h1>
           <p className="hero-description" style={{ maxWidth: '60ch' }}>
             STIMULAI is an engineering company solving complex physical and computational challenges at the human-machine boundary. We seek engineers, materials scientists, and software developers who refuse to accept incremental defaults.
@@ -44,14 +43,12 @@ export default function Careers() {
         <div className="container">
           <div className="grid-2">
             <div>
-              <span className="system-code">[ CAPABILITY_METRIC ]</span>
               <h2 style={{ fontSize: 'var(--font-size-2xl)', marginTop: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>We hire for capability, not conventions.</h2>
               <p>
                 The best engineers we've ever met are the ones who are still not satisfied with their last answer. If you recognize yourself in that description, we want to hear from you — regardless of where you've worked before or what your credentials say.
               </p>
             </div>
             <div>
-              <span className="system-code">[ ENVIRONMENT_LOG ]</span>
               <h2 style={{ fontSize: 'var(--font-size-2xl)', marginTop: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>Obsession is a core attribute.</h2>
               <p>
                 We believe that the intersection of physiology and structural engineering is one of the most intellectually rich environments to build in. We take systems performance seriously — our own as much as our machines'. We decide clearly and build without compromise.
@@ -65,9 +62,9 @@ export default function Careers() {
       <section className="reveal">
         <div className="container">
           <SectionHeader eyebrow="[ R&D_VACANCIES ]" title="Open Engineering Systems Roles" centered />
-          
+
           <div className="grid-2" style={{ marginTop: 'var(--space-6)' }}>
-            <CareerCard 
+            <CareerCard
               title="Senior Materials Scientist / Engineer"
               department="[ DEPT_MAT_SCI ]"
               meta="Hybrid · Full Time"
@@ -76,7 +73,7 @@ export default function Careers() {
               Develop custom carbon composite layup schedules, optimize structural load-path profiles, and select metallic alloys for high-stress aerospace and chassis tolerances.
             </CareerCard>
 
-            <CareerCard 
+            <CareerCard
               title="Low-Latency Control Systems Engineer"
               department="[ DEPT_EMB_SYS ]"
               meta="On-site (R&D) · Full Time"
@@ -85,7 +82,7 @@ export default function Careers() {
               Write highly optimized, low-latency firmware for multi-axis sensor fusion, hardware communications protocols, and real-time algorithmic telemetry loops.
             </CareerCard>
 
-            <CareerCard 
+            <CareerCard
               title="Human-Machine Systems Analyst"
               department="[ DEPT_BIOMECH ]"
               meta="Hybrid · Full Time"
@@ -94,7 +91,7 @@ export default function Careers() {
               Model biological force delivery profiles, coordinate dynamic load transfer interfaces, and calibrate adaptive biomechanical tolerances to map athlete systems.
             </CareerCard>
 
-            <CareerCard 
+            <CareerCard
               title="Lead Systems Architect"
               department="[ DEPT_SYS_ENG ]"
               meta="Hybrid · Full Time"
@@ -130,11 +127,11 @@ export default function Careers() {
               </div>
               <div className="form-group">
                 <label htmlFor="role" className="form-label">Target R&D Division</label>
-                <select 
-                  id="role" 
-                  name="role" 
-                  className="form-select" 
-                  required 
+                <select
+                  id="role"
+                  name="role"
+                  className="form-select"
+                  required
                   value={selectedRole}
                   onChange={(e) => setSelectedRole(e.target.value)}
                 >

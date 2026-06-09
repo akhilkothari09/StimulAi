@@ -30,12 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar-status-bar">
-        <div><span className="status-dot"></span>SYS STATUS: OPERATIONAL</div>
-        <div>LATENCY: 2.0ms // LINK: SECURE</div>
-        <div>NODE_SYS: v1.04</div>
-      </div>
-      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} style={{ top: '21px' }}>
+      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-container container">
           <Link to="/" className="navbar-logo" aria-label="STIMULAI Home">STIMULAI</Link>
           

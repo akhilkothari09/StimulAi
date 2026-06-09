@@ -487,6 +487,10 @@ section {
   .navbar-hamburger.active .hamburger-line:nth-child(3) {
     transform: translateY(-7px) rotate(-45deg);
   }
+  .mobile-nav-overlay {
+    justify-content: flex-start;
+    padding-top: 140px;
+  }
 }
 
 /* --- Global Footer --- */
@@ -855,6 +859,14 @@ section {
   line-height: 1.5;
 }
 
+.philosophy-row {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: var(--space-6);
+  border: 1px solid var(--color-border-default);
+  padding: var(--space-6);
+}
+
 @media (max-width: 1023px) {
   .philosophy-teaser-grid {
     grid-template-columns: 1fr;
@@ -893,6 +905,17 @@ section {
   font-size: var(--font-size-xl);
   font-weight: 600;
   color: var(--color-text-primary);
+}
+
+@media (max-width: 767px) {
+  .philosophy-row {
+    grid-template-columns: 1fr;
+    padding: var(--space-5);
+    gap: var(--space-4);
+  }
+  .tech-card {
+    padding: var(--space-5);
+  }
 }
 
 .tech-card-desc {
@@ -1010,11 +1033,7 @@ section {
 
 @media (max-width: 767px) {
   .annotation {
-    position: static;
-    width: 100%;
-    text-align: left !important;
-    align-items: flex-start !important;
-    margin-bottom: var(--space-4);
+    display: none;
   }
   .annotation-line, .annotation-dot {
     display: none;
@@ -1047,6 +1066,12 @@ section {
   border-top: 1px solid var(--color-border-default);
   border-bottom: 1px solid var(--color-border-default);
   padding: var(--space-6) 0;
+}
+
+.metrics-cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .metric-col {
@@ -1093,6 +1118,10 @@ section {
     gap: var(--space-5);
     border: none;
     padding: 0;
+  }
+  .metrics-cards-container {
+    flex-direction: column;
+    gap: var(--space-5);
   }
   .metric-col {
     border-right: none;
@@ -1251,9 +1280,14 @@ section {
 
 /* Navigation Status Bar Ticker */
 .navbar-status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 24px;
   background-color: #050505;
   border-bottom: 1px solid var(--color-border-default);
-  padding: var(--space-1) var(--space-8);
+  padding: 0 var(--space-8);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1263,6 +1297,16 @@ section {
   color: var(--color-tech-blue);
   z-index: 1001;
   text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .navbar-status-bar {
+    padding: 0 var(--space-5);
+  }
+  .navbar-status-bar div:nth-child(2) {
+    display: none;
+  }
 }
 
 .status-dot {
@@ -1311,7 +1355,7 @@ section {
   position: relative;
 }
 
-.crosshair-card::after, .crosshair-card::before {
+.crosshair-card::before {
   content: '+';
   position: absolute;
   font-family: monospace;
@@ -1319,16 +1363,8 @@ section {
   color: var(--color-tech-blue);
   opacity: 0.7;
   pointer-events: none;
-}
-
-.crosshair-card::before {
   top: 10px;
   left: 10px;
-}
-
-.crosshair-card::after {
-  bottom: 10px;
-  right: 10px;
 }
 
 /* Override Connector / Pulse Indicators to Tech Blue */
@@ -1367,3 +1403,44 @@ section {
   opacity: 0.6;
   color: var(--color-tech-blue);
 }
+
+/* Specifications Matrix List Styles */
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.spec-item {
+  border-bottom: 1px solid var(--color-border-default);
+  padding-bottom: var(--space-2);
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.spec-label {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  font-family: monospace;
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.spec-value {
+  color: var(--color-text-primary);
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .spec-item {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+    align-items: flex-start;
+  }
+}
+

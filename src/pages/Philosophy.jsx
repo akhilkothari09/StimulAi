@@ -7,7 +7,6 @@ export default function Philosophy() {
       {/* INNER PAGE HERO */}
       <section className="hero-section" style={{ minHeight: '60vh', paddingBottom: 'var(--space-6)' }}>
         <div className="container" style={{ zIndex: 2 }}>
-          <span className="hero-eyebrow">[ DESIGN_METHODOLOGY: FIRST_PRINCIPLES ]</span>
           <h1 className="hero-headline" style={{ maxWidth: '25ch' }}>ENGINEERING HUMAN POTENTIAL.</h1>
           <p className="hero-description" style={{ maxWidth: '60ch' }}>
             We do not iterate on standard industry paradigms. We formulate performance requirements from baseline physics and engineer systems from the ground up.
@@ -18,11 +17,10 @@ export default function Philosophy() {
       {/* PHILOSOPHY DEEP-DIVE SECTIONS */}
       <section style={{ backgroundColor: 'var(--color-surface-secondary)' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-8)' }}>
-          
+
           {/* Section 1: First Principles */}
-          <div className="reveal crosshair-card" style={{ display: 'grid', gridTemplateColumns: '4fr 8fr', gap: 'var(--space-6)', border: '1px solid var(--color-border-default)', padding: 'var(--space-6)' }}>
+          <div className="reveal crosshair-card philosophy-row">
             <div>
-              <span className="system-code" style={{ marginBottom: 'var(--space-2)', display: 'inline-block' }}>[ METHOD_01 ]</span>
               <h2 style={{ fontSize: 'var(--font-size-xl)', color: 'var(--color-text-primary)' }}>First Principles</h2>
             </div>
             <p style={{ fontSize: 'var(--font-size-md)', color: 'var(--color-text-secondary)', lineHeight: '1.7' }}>
@@ -31,9 +29,8 @@ export default function Philosophy() {
           </div>
 
           {/* Section 2: The Athlete as System */}
-          <div className="reveal crosshair-card" style={{ display: 'grid', gridTemplateColumns: '4fr 8fr', gap: 'var(--space-6)', border: '1px solid var(--color-border-default)', padding: 'var(--space-6)' }}>
+          <div className="reveal crosshair-card philosophy-row">
             <div>
-              <span className="system-code" style={{ marginBottom: 'var(--space-2)', display: 'inline-block' }}>[ METHOD_02 ]</span>
               <h2 style={{ fontSize: 'var(--font-size-xl)', color: 'var(--color-text-primary)' }}>Biomechanical Interface</h2>
             </div>
             <p style={{ fontSize: 'var(--font-size-md)', color: 'var(--color-text-secondary)', lineHeight: '1.7' }}>
@@ -42,9 +39,8 @@ export default function Philosophy() {
           </div>
 
           {/* Section 3: Obsessive Precision */}
-          <div className="reveal crosshair-card" style={{ display: 'grid', gridTemplateColumns: '4fr 8fr', gap: 'var(--space-6)', border: '1px solid var(--color-border-default)', padding: 'var(--space-6)' }}>
+          <div className="reveal crosshair-card philosophy-row">
             <div>
-              <span className="system-code" style={{ marginBottom: 'var(--space-2)', display: 'inline-block' }}>[ METHOD_03 ]</span>
               <h2 style={{ fontSize: 'var(--font-size-xl)', color: 'var(--color-text-primary)' }}>System Integrity</h2>
             </div>
             <p style={{ fontSize: 'var(--font-size-md)', color: 'var(--color-text-secondary)', lineHeight: '1.7' }}>
@@ -53,9 +49,8 @@ export default function Philosophy() {
           </div>
 
           {/* Section 4: The Methodology Scales */}
-          <div className="reveal crosshair-card" style={{ display: 'grid', gridTemplateColumns: '4fr 8fr', gap: 'var(--space-6)', border: '1px solid var(--color-border-default)', padding: 'var(--space-6)' }}>
+          <div className="reveal crosshair-card philosophy-row">
             <div>
-              <span className="system-code" style={{ marginBottom: 'var(--space-2)', display: 'inline-block' }}>[ METHOD_04 ]</span>
               <h2 style={{ fontSize: 'var(--font-size-xl)', color: 'var(--color-text-primary)' }}>Platform Scalability</h2>
             </div>
             <p style={{ fontSize: 'var(--font-size-md)', color: 'var(--color-text-secondary)', lineHeight: '1.7' }}>
